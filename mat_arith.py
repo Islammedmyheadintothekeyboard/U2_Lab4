@@ -27,13 +27,16 @@ def mat_mul(m1, m2):
   m1m = len(m1)
   m1n = len(m1[0])
   m2m = len(m2)
-  m2n = len(m1[0])
+  m2n = len(m2[0])
   if m1n == m2m:
-    new = [[0]*m1m for i in range(m2n)]
+    new = [[0]*m2n for i in range(m1m)]
     for row in range(m1m):
       for column in range(m2n):
         solution = 0
-        for i in range(idk):
-          solution += tempsol
+        for multi in range(m1n):
+          multisol = m1[row][multi] * m2[multi][column]
+          solution += multisol
+        new[row][column] = solution
+    return new
   else:
     return "no solution"

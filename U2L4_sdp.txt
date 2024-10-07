@@ -1,0 +1,5 @@
+1. The matrices must have the exact same dimensions.
+2. The n of the first matrix must be the same number as the m of the second matrix.
+3. The m of the first matrix and the n of the second matrix determine the size of the resulting matrix.
+4. The outside loop has to complete however many rows iterations there are in the new matrix and the nested loop has to complete however many columns iterations there are in the new matrix,
+5. We can use the len() to ensure that the loop stays within the index of the matrix.
